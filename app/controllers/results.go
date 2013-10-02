@@ -13,11 +13,10 @@ import (
 )
 
 /*
-This is the Result object passed to revel when you render
-a view with a Layout set. RenderTmpl is the Templates that
-were set with ContentFor. Layout is the set Layout. Otherwise
-it is the same as revel's RenderTemplateResult. This actually
-doesn't require a Layout to be set, not that its used with that
+This is the Result object passed to revel when you render a view with a Layout
+set. RenderTmpl is the Templates that were set with ContentFor. Layout is the
+set Layout. Otherwise it is the same as revel's RenderTemplateResult. This
+actually doesn't require a Layout to be set, not that its used with that
 functionality.
 */
 type RenderLayoutTemplateResult struct {

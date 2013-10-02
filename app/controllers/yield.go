@@ -9,11 +9,11 @@ Then instead of starting your controllers from *revel.Controller, you can
 import "github.com/acsellers/yield/app/controllers" and then use the struct
 yield.Controller to embed into your controllers.
 
-Note: the module in that import path is named yield not controllers, and
-that is why you embed yield.Controller not controllers.Controller.
+Note: the module in that import path is named yield not controllers, and that
+is why you embed yield.Controller not controllers.Controller.
 
-The booking sample from revel was ported to use the basic yield
-mechanism and is available in the samples directory.
+The booking sample from revel was ported to use the basic yield mechanism and
+is available in the samples directory.
 */
 package yield
 
@@ -27,11 +27,12 @@ import (
 )
 
 /*
-To set your directory for loading layouts from, set the LayoutPath variable to the location
-relative to the base of your revel directory. You can only set one directory at the moment.
+To set your directory for loading layouts from, set the LayoutPath variable to
+the location relative to the base of your revel directory. You can only set one
+directory at the moment.
 
-To set a default layout, take the format you wish that layout to apply for, i.e. "html", then set
-that string to the name of the layout you want to render.
+To set a default layout, take the format you wish that layout to apply for,
+i.e. "html", then set that string to the name of the layout you want to render.
 */
 var (
 	LayoutPath      = "app/layouts"
@@ -112,12 +113,12 @@ type Controller struct {
 }
 
 /*
-Set the layout to be rendered for the current action. Setting the layout
-to empty string will cause no layout to be rendered. No layout will be rendered
-if you did not set a Default layout for the current request format and you
-do not call this function to set a specific layout. You do not have to include
-the format for the template, that will be added, but adding it the format would
-not cause a problem.
+Set the layout to be rendered for the current action. Setting the layout to
+empty string will cause no layout to be rendered. No layout will be rendered if
+you did not set a Default layout for the current request format and you do not
+call this function to set a specific layout. You do not have to include the
+format for the template, that will be added, but adding it the format would not
+cause a problem.
 */
 func (lc *Controller) Layout(s string) {
 	if s == "" {
