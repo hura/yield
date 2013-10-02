@@ -129,6 +129,13 @@ func (lc *Controller) Layout(s string) {
 }
 
 /*
+Disables the layout for this request
+*/
+func (lc *Controller) NoLayout() {
+	lc.noLayout = true
+}
+
+/*
 The same kind of function as calling Render on revel.Controller, except that
 this will pick up the Layout you specified and render that as well.
 */
